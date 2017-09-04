@@ -1,6 +1,7 @@
 'use strict';
 /** Requires */
 import syntax from 'babel-plugin-syntax-pipeline';
+import template from 'babel-template';
 
 
 /** Visitor */
@@ -14,7 +15,10 @@ export default function ({ types: t }) {
         }
 
         path.replaceWith(
-          t.callExpression(path.node.right, [path.node.left])
+          template('(FUNCTION(ARGUMENTS))')({
+            FUNCTION: path.node.right,
+            ARGUMENTS: path.node.left
+          })
         );
       }
     }

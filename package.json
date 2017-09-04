@@ -32,7 +32,8 @@
     "lib/"
   ],
   "dependencies": {
-    "babel-plugin-syntax-pipeline": "0.1.0"
+    "babel-plugin-syntax-pipeline": "0.1.0",
+    "babel-template": "^6.26.0"
   },
   "devDependencies": {
     "babel-cli": "6.24.0",
